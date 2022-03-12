@@ -1,0 +1,41 @@
+PODS:
+  - Auth0 (1.39.0):
+    - JWTDecode (~> 2.0)
+    - SimpleKeychain
+  - JWTDecode (2.6.3)
+  - SimpleKeychain (0.12.5)
+  - Stripe (21.11.1):
+    - Stripe/Stripe3DS2 (= 21.11.1)
+    - StripeCore (= 21.11.1)
+    - StripeUICore (= 21.11.1)
+  - Stripe/Stripe3DS2 (21.11.1):
+    - StripeCore (= 21.11.1)
+    - StripeUICore (= 21.11.1)
+  - StripeCore (21.11.1)
+  - StripeUICore (21.11.1):
+    - StripeCore (= 21.11.1)
+
+DEPENDENCIES:
+  - Auth0 (~> 1.0)
+  - Stripe
+
+SPEC REPOS:
+  trunk:
+    - Auth0
+    - JWTDecode
+    - SimpleKeychain
+    - Stripe
+    - StripeCore
+    - StripeUICore
+
+SPEC CHECKSUMS:
+  Auth0: 9be356d7416232a2e7bb64d4da76183f4b2c802d
+  JWTDecode: 33e5e26e5ddbd21b2065820894c08fef0cad9509
+  SimpleKeychain: 8193a9e40967eccac933c1fde82de46c07a5ae26
+  Stripe: f2bed8369154c35c8ec794704e042e05240d6f21
+  StripeCore: 36571be19dae15e90c8ad47e1af45712aea93f5a
+  StripeUICore: 1b32566d6a69581be786609a032872b0fb5a6823
+
+PODFILE CHECKSUM: ead98dd8842a3e18687407071b8d0a9d0dce629e
+
+COCOAPODS: 1.11.2

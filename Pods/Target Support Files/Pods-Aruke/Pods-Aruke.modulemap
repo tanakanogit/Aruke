@@ -1,0 +1,6 @@
+framework module Pods_Aruke {
+  umbrella header "Pods-Aruke-umbrella.h"
+
+  export *
+  module * { export * }
+}

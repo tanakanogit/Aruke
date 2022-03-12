@@ -1,0 +1,7 @@
+${PODS_ROOT}/Target Support Files/Pods-Aruke/Pods-Aruke-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Auth0/Auth0.framework
+${BUILT_PRODUCTS_DIR}/JWTDecode/JWTDecode.framework
+${BUILT_PRODUCTS_DIR}/SimpleKeychain/SimpleKeychain.framework
+${BUILT_PRODUCTS_DIR}/Stripe/Stripe.framework
+${BUILT_PRODUCTS_DIR}/StripeCore/StripeCore.framework
+${BUILT_PRODUCTS_DIR}/StripeUICore/StripeUICore.framework
