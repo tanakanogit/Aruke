@@ -6,8 +6,11 @@
 //
 
 import UIKit
+import Auth0
 
 class LoginViewController: UIViewController {
+    
+    let credentialsManager = CredentialsManager(authentication: Auth0.authentication())
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,15 +18,36 @@ class LoginViewController: UIViewController {
         print("== Login Controller ==")
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func tapLogin(_ sender: UIButton) {
+        showLogin()
     }
-    */
-
+    
+    private func showLogin() {
+        let APIIdentifier = "https://backend"
+        
+        Auth0
+            .webAuth()
+            .scope("openid profile offline_access")
+            .audience(APIIdentifier)
+            .start {
+                switch $0 {
+                case .failure(let error):
+                    print("Error: \(error)")
+                case .success(let credentials):
+                    if(!SessionManager.shared.store(credentials: credentials)) {
+                        print("Failed to store credentials")
+                    } else {
+                        SessionManager.shared.retrieveProfile { error in
+                            DispatchQueue.main.async {
+                                guard error == nil else {
+                                    print("Failed to retrieve profile: \(String(describing: error))")
+                                    return
+                                }
+                            }
+                        }
+                    }
+                }
+        }
+    }
+    
 }

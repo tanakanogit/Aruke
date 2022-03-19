@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		38B1DD7D27E594F900E57EF9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B1DD7C27E594F900E57EF9 /* LoginViewController.swift */; };
 		38B1DD7F27E5967F00E57EF9 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38B1DD7E27E5967F00E57EF9 /* Login.storyboard */; };
+		38B1DD8127E5994C00E57EF9 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B1DD8027E5994C00E57EF9 /* SessionManager.swift */; };
+		38B1DD8327E59D8000E57EF9 /* Auth0.plist in Resources */ = {isa = PBXBuildFile; fileRef = 38B1DD8227E59D8000E57EF9 /* Auth0.plist */; };
 		7F0DA816CEAFA1B677741AC4 /* Pods_Aruke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D3A8374CB7A7268D2C8ACC5 /* Pods_Aruke.framework */; };
 		E3C7196527DB300000F82A49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C7196427DB300000F82A49 /* AppDelegate.swift */; };
 		E3C7196727DB300000F82A49 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C7196627DB300000F82A49 /* SceneDelegate.swift */; };
@@ -22,6 +24,8 @@
 		1D3A8374CB7A7268D2C8ACC5 /* Pods_Aruke.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Aruke.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		38B1DD7C27E594F900E57EF9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		38B1DD7E27E5967F00E57EF9 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		38B1DD8027E5994C00E57EF9 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
+		38B1DD8227E59D8000E57EF9 /* Auth0.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Auth0.plist; sourceTree = "<group>"; };
 		3E96DBB30F178CDCC51D0971 /* Pods-Aruke.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aruke.release.xcconfig"; path = "Target Support Files/Pods-Aruke/Pods-Aruke.release.xcconfig"; sourceTree = "<group>"; };
 		4ACD3CF013E746E2F0A3272D /* Pods-Aruke.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aruke.debug.xcconfig"; path = "Target Support Files/Pods-Aruke/Pods-Aruke.debug.xcconfig"; sourceTree = "<group>"; };
 		E3C7196127DB300000F82A49 /* Aruke.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aruke.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,11 +92,13 @@
 				E3C7196627DB300000F82A49 /* SceneDelegate.swift */,
 				E3C7196827DB300000F82A49 /* MainViewController.swift */,
 				38B1DD7C27E594F900E57EF9 /* LoginViewController.swift */,
+				38B1DD8027E5994C00E57EF9 /* SessionManager.swift */,
 				38B1DD7E27E5967F00E57EF9 /* Login.storyboard */,
 				E3C7196A27DB300000F82A49 /* Main.storyboard */,
 				E3C7196D27DB300300F82A49 /* Assets.xcassets */,
 				E3C7196F27DB300300F82A49 /* LaunchScreen.storyboard */,
 				E3C7197227DB300300F82A49 /* Info.plist */,
+				38B1DD8227E59D8000E57EF9 /* Auth0.plist */,
 			);
 			path = Aruke;
 			sourceTree = "<group>";
@@ -157,6 +163,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38B1DD8327E59D8000E57EF9 /* Auth0.plist in Resources */,
 				38B1DD7F27E5967F00E57EF9 /* Login.storyboard in Resources */,
 				E3C7197127DB300300F82A49 /* LaunchScreen.storyboard in Resources */,
 				E3C7196E27DB300300F82A49 /* Assets.xcassets in Resources */,
@@ -216,6 +223,7 @@
 				38B1DD7D27E594F900E57EF9 /* LoginViewController.swift in Sources */,
 				E3C7196927DB300000F82A49 /* MainViewController.swift in Sources */,
 				E3C7196527DB300000F82A49 /* AppDelegate.swift in Sources */,
+				38B1DD8127E5994C00E57EF9 /* SessionManager.swift in Sources */,
 				E3C7196727DB300000F82A49 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
