@@ -7,10 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		38B1DD7D27E594F900E57EF9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B1DD7C27E594F900E57EF9 /* LoginViewController.swift */; };
+		38B1DD7F27E5967F00E57EF9 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38B1DD7E27E5967F00E57EF9 /* Login.storyboard */; };
 		7F0DA816CEAFA1B677741AC4 /* Pods_Aruke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D3A8374CB7A7268D2C8ACC5 /* Pods_Aruke.framework */; };
 		E3C7196527DB300000F82A49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C7196427DB300000F82A49 /* AppDelegate.swift */; };
 		E3C7196727DB300000F82A49 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C7196627DB300000F82A49 /* SceneDelegate.swift */; };
-		E3C7196927DB300000F82A49 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C7196827DB300000F82A49 /* ViewController.swift */; };
+		E3C7196927DB300000F82A49 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C7196827DB300000F82A49 /* MainViewController.swift */; };
 		E3C7196C27DB300000F82A49 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3C7196A27DB300000F82A49 /* Main.storyboard */; };
 		E3C7196E27DB300300F82A49 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3C7196D27DB300300F82A49 /* Assets.xcassets */; };
 		E3C7197127DB300300F82A49 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3C7196F27DB300300F82A49 /* LaunchScreen.storyboard */; };
@@ -18,12 +20,14 @@
 
 /* Begin PBXFileReference section */
 		1D3A8374CB7A7268D2C8ACC5 /* Pods_Aruke.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Aruke.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		38B1DD7C27E594F900E57EF9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		38B1DD7E27E5967F00E57EF9 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		3E96DBB30F178CDCC51D0971 /* Pods-Aruke.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aruke.release.xcconfig"; path = "Target Support Files/Pods-Aruke/Pods-Aruke.release.xcconfig"; sourceTree = "<group>"; };
 		4ACD3CF013E746E2F0A3272D /* Pods-Aruke.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aruke.debug.xcconfig"; path = "Target Support Files/Pods-Aruke/Pods-Aruke.debug.xcconfig"; sourceTree = "<group>"; };
 		E3C7196127DB300000F82A49 /* Aruke.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aruke.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3C7196427DB300000F82A49 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E3C7196627DB300000F82A49 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E3C7196827DB300000F82A49 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E3C7196827DB300000F82A49 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		E3C7196B27DB300000F82A49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E3C7196D27DB300300F82A49 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E3C7197027DB300300F82A49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -48,7 +52,6 @@
 				4ACD3CF013E746E2F0A3272D /* Pods-Aruke.debug.xcconfig */,
 				3E96DBB30F178CDCC51D0971 /* Pods-Aruke.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -83,7 +86,9 @@
 			children = (
 				E3C7196427DB300000F82A49 /* AppDelegate.swift */,
 				E3C7196627DB300000F82A49 /* SceneDelegate.swift */,
-				E3C7196827DB300000F82A49 /* ViewController.swift */,
+				E3C7196827DB300000F82A49 /* MainViewController.swift */,
+				38B1DD7C27E594F900E57EF9 /* LoginViewController.swift */,
+				38B1DD7E27E5967F00E57EF9 /* Login.storyboard */,
 				E3C7196A27DB300000F82A49 /* Main.storyboard */,
 				E3C7196D27DB300300F82A49 /* Assets.xcassets */,
 				E3C7196F27DB300300F82A49 /* LaunchScreen.storyboard */,
@@ -152,6 +157,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38B1DD7F27E5967F00E57EF9 /* Login.storyboard in Resources */,
 				E3C7197127DB300300F82A49 /* LaunchScreen.storyboard in Resources */,
 				E3C7196E27DB300300F82A49 /* Assets.xcassets in Resources */,
 				E3C7196C27DB300000F82A49 /* Main.storyboard in Resources */,
@@ -207,7 +213,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E3C7196927DB300000F82A49 /* ViewController.swift in Sources */,
+				38B1DD7D27E594F900E57EF9 /* LoginViewController.swift in Sources */,
+				E3C7196927DB300000F82A49 /* MainViewController.swift in Sources */,
 				E3C7196527DB300000F82A49 /* AppDelegate.swift in Sources */,
 				E3C7196727DB300000F82A49 /* SceneDelegate.swift in Sources */,
 			);
@@ -367,6 +374,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -396,6 +404,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

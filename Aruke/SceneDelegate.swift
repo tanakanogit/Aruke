@@ -13,10 +13,28 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-        // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-        // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
+
         guard let _ = (scene as? UIWindowScene) else { return }
+        
+//        let ud = UserDefaults.standard 念のため残した
+//        let isLogin = ud.bool(forKey: "isLogin") 念のため残した
+        let isLogin = false
+//        let window = UIWindow(windowScene: scene as! UIWindowScene) 念のため残した
+        if isLogin == true {
+            // ログイン中だったら
+            let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+            let rootViewController = storyboard.instantiateViewController(withIdentifier: "MainViewController")
+            self.window?.rootViewController = rootViewController
+//            self.window?.backgroundColor = UIColor.white 念のため残した
+            self.window?.makeKeyAndVisible()
+        } else {
+            // ログインしていなかったら
+            let storyboard = UIStoryboard(name: "Login", bundle: Bundle.main)
+            let rootViewController = storyboard.instantiateViewController(withIdentifier: "LoginViewController")
+            self.window?.rootViewController = rootViewController
+//            self.window?.backgroundColor = UIColor.white 念のため残した
+            self.window?.makeKeyAndVisible()
+        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
