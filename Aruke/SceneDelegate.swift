@@ -16,55 +16,43 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         guard let _ = (scene as? UIWindowScene) else { return }
         
-//        let ud = UserDefaults.standard 念のため残した
-//        let isLogin = ud.bool(forKey: "isLogin") 念のため残した
-        let isLogin = false
-//        let window = UIWindow(windowScene: scene as! UIWindowScene) 念のため残した
-        if isLogin == true {
-            // ログイン中だったら
-            let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-            let rootViewController = storyboard.instantiateViewController(withIdentifier: "MainViewController")
-            self.window?.rootViewController = rootViewController
-//            self.window?.backgroundColor = UIColor.white 念のため残した
-            self.window?.makeKeyAndVisible()
-        } else {
-            // ログインしていなかったら
-            let storyboard = UIStoryboard(name: "Login", bundle: Bundle.main)
-            let rootViewController = storyboard.instantiateViewController(withIdentifier: "LoginViewController")
-            self.window?.rootViewController = rootViewController
-//            self.window?.backgroundColor = UIColor.white 念のため残した
-            self.window?.makeKeyAndVisible()
+        SessionManager.shared.renewAuth { error in
+            SessionManager.shared.retrieveProfile { error in
+                DispatchQueue.main.async {
+                    if error == nil {
+                        self.showTopViewController()
+                    } else {
+                        self.showLoginViewController()
+                    }
+                }
+            }
         }
     }
 
-    func sceneDidDisconnect(_ scene: UIScene) {
-        // Called as the scene is being released by the system.
-        // This occurs shortly after the scene enters the background, or when its session is discarded.
-        // Release any resources associated with this scene that can be re-created the next time the scene connects.
-        // The scene may re-connect later, as its session was not necessarily discarded (see `application:didDiscardSceneSessions` instead).
+    // 既存の関数 必要であれば編集
+    func sceneDidDisconnect(_ scene: UIScene) {}
+    func sceneDidBecomeActive(_ scene: UIScene) {}
+    func sceneWillResignActive(_ scene: UIScene) {}
+    func sceneWillEnterForeground(_ scene: UIScene) {}
+    func sceneDidEnterBackground(_ scene: UIScene) {}
+    
+    // 以下追加した関数
+    private func showTopViewController() {// TopViewControllerを表示
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let rootViewController = storyboard.instantiateViewController(withIdentifier: "MainViewController")
+        self.window?.rootViewController = rootViewController
+//            self.window?.backgroundColor = UIColor.white 念のため残した
+        self.window?.makeKeyAndVisible()
     }
-
-    func sceneDidBecomeActive(_ scene: UIScene) {
-        // Called when the scene has moved from an inactive state to an active state.
-        // Use this method to restart any tasks that were paused (or not yet started) when the scene was inactive.
+    
+    // LoginViewControllerを表示
+    private func showLoginViewController() {
+        let storyboard = UIStoryboard(name: "Login", bundle: Bundle.main)
+        let rootViewController = storyboard.instantiateViewController(withIdentifier: "LoginViewController")
+        self.window?.rootViewController = rootViewController
+//            self.window?.backgroundColor = UIColor.white 念のため残した
+        self.window?.makeKeyAndVisible()
     }
-
-    func sceneWillResignActive(_ scene: UIScene) {
-        // Called when the scene will move from an active state to an inactive state.
-        // This may occur due to temporary interruptions (ex. an incoming phone call).
-    }
-
-    func sceneWillEnterForeground(_ scene: UIScene) {
-        // Called as the scene transitions from the background to the foreground.
-        // Use this method to undo the changes made on entering the background.
-    }
-
-    func sceneDidEnterBackground(_ scene: UIScene) {
-        // Called as the scene transitions from the foreground to the background.
-        // Use this method to save data, release shared resources, and store enough scene-specific state information
-        // to restore the scene back to its current state.
-    }
-
 
 }
 

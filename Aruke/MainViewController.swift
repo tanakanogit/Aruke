@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Auth0
 
 class MainViewController: UIViewController {
 
@@ -14,7 +15,19 @@ class MainViewController: UIViewController {
         
         print("== Main Controller ==")
     }
-
+    
+    @IBAction func tapLogout(_ sender: UIButton) {
+        self.logout()
+    }
+    
+    private func logout() {
+        SessionManager.shared.logout()
+        Auth0
+            .webAuth()
+            .clearSession(federated: false) { result in
+                guard result else {return}
+            }
+    }
 
 }
 
