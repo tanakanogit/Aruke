@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3833CE6A27EBDD9E00508F23 /* SettingButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3833CE6927EBDD9E00508F23 /* SettingButtonViewController.swift */; };
+		3833CE6C27EBDDAC00508F23 /* DisplayGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3833CE6B27EBDDAC00508F23 /* DisplayGoalViewController.swift */; };
+		3833CE6E27EBDF8800508F23 /* SettingGoal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3833CE6D27EBDF8800508F23 /* SettingGoal.storyboard */; };
+		3833CE7027EBDFDC00508F23 /* SettingGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3833CE6F27EBDFDC00508F23 /* SettingGoalViewController.swift */; };
 		38B1DD7D27E594F900E57EF9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B1DD7C27E594F900E57EF9 /* LoginViewController.swift */; };
 		38B1DD7F27E5967F00E57EF9 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38B1DD7E27E5967F00E57EF9 /* Login.storyboard */; };
 		38B1DD8127E5994C00E57EF9 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B1DD8027E5994C00E57EF9 /* SessionManager.swift */; };
@@ -22,6 +26,10 @@
 
 /* Begin PBXFileReference section */
 		1D3A8374CB7A7268D2C8ACC5 /* Pods_Aruke.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Aruke.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3833CE6927EBDD9E00508F23 /* SettingButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingButtonViewController.swift; sourceTree = "<group>"; };
+		3833CE6B27EBDDAC00508F23 /* DisplayGoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayGoalViewController.swift; sourceTree = "<group>"; };
+		3833CE6D27EBDF8800508F23 /* SettingGoal.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingGoal.storyboard; sourceTree = "<group>"; };
+		3833CE6F27EBDFDC00508F23 /* SettingGoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingGoalViewController.swift; sourceTree = "<group>"; };
 		38B1DD7C27E594F900E57EF9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		38B1DD7E27E5967F00E57EF9 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		38B1DD8027E5994C00E57EF9 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
@@ -92,8 +100,12 @@
 				E3C7196627DB300000F82A49 /* SceneDelegate.swift */,
 				E3C7196827DB300000F82A49 /* MainViewController.swift */,
 				38B1DD7C27E594F900E57EF9 /* LoginViewController.swift */,
+				3833CE6927EBDD9E00508F23 /* SettingButtonViewController.swift */,
+				3833CE6B27EBDDAC00508F23 /* DisplayGoalViewController.swift */,
+				3833CE6F27EBDFDC00508F23 /* SettingGoalViewController.swift */,
 				38B1DD8027E5994C00E57EF9 /* SessionManager.swift */,
 				38B1DD7E27E5967F00E57EF9 /* Login.storyboard */,
+				3833CE6D27EBDF8800508F23 /* SettingGoal.storyboard */,
 				E3C7196A27DB300000F82A49 /* Main.storyboard */,
 				E3C7196D27DB300300F82A49 /* Assets.xcassets */,
 				E3C7196F27DB300300F82A49 /* LaunchScreen.storyboard */,
@@ -163,6 +175,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3833CE6E27EBDF8800508F23 /* SettingGoal.storyboard in Resources */,
 				38B1DD8327E59D8000E57EF9 /* Auth0.plist in Resources */,
 				38B1DD7F27E5967F00E57EF9 /* Login.storyboard in Resources */,
 				E3C7197127DB300300F82A49 /* LaunchScreen.storyboard in Resources */,
@@ -222,9 +235,12 @@
 			files = (
 				38B1DD7D27E594F900E57EF9 /* LoginViewController.swift in Sources */,
 				E3C7196927DB300000F82A49 /* MainViewController.swift in Sources */,
+				3833CE7027EBDFDC00508F23 /* SettingGoalViewController.swift in Sources */,
 				E3C7196527DB300000F82A49 /* AppDelegate.swift in Sources */,
+				3833CE6C27EBDDAC00508F23 /* DisplayGoalViewController.swift in Sources */,
 				38B1DD8127E5994C00E57EF9 /* SessionManager.swift in Sources */,
 				E3C7196727DB300000F82A49 /* SceneDelegate.swift in Sources */,
+				3833CE6A27EBDD9E00508F23 /* SettingButtonViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -20,6 +20,7 @@ class LoginViewController: UIViewController {
     
     @IBAction func tapLogin(_ sender: UIButton) {
         showLogin()
+        // TODO(makio): login後の処理を記載する必要あり
     }
     
     private func showLogin() {

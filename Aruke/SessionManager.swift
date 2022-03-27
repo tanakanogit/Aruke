@@ -25,7 +25,7 @@ class SessionManager {
             return callback(CredentialsManagerError.noCredentials)
         }
         
-        print(accessToken)
+//        print(accessToken) ポストマン用
         
         self.authentication
             .userInfo(withAccessToken: accessToken)
