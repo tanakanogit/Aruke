@@ -17,11 +17,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4zw-gj-5xT">
-                                <rect key="frame" x="20" y="796" width="358" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4zw-gj-5xT">
+                                <rect key="frame" x="20" y="823" width="358" height="24"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="ログアウト(テスト用)"/>
+                                <buttonConfiguration key="configuration" style="plain" title="ログアウト(テスト用)">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="8"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="tapLogout:" destination="mpE-ey-5iF" eventType="touchUpInside" id="gJ0-dD-Ade"/>
                                 </connections>
@@ -30,16 +31,16 @@
                                 <rect key="frame" x="20" y="84" width="374" height="145"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aruke" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ugm-Gb-fCo">
-                                        <rect key="frame" x="0.0" y="0.0" width="124" height="60"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                        <nil key="textColor"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="137" height="60"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
+                                        <color key="textColor" name="MainColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="77a-np-6aG">
                                         <rect key="frame" x="0.0" y="85" width="253.5" height="60"/>
                                         <string key="text">お金を掛けて、
 目標歩数を達成しよう</string>
-                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -83,6 +84,7 @@
                             <constraint firstItem="5MD-Ef-x2V" firstAttribute="trailing" secondItem="hjI-ad-sSI" secondAttribute="trailing" constant="20" id="c2u-pJ-LMt"/>
                             <constraint firstItem="hjI-ad-sSI" firstAttribute="leading" secondItem="5MD-Ef-x2V" secondAttribute="leading" constant="20" id="eGc-v4-62Z"/>
                             <constraint firstItem="5MD-Ef-x2V" firstAttribute="trailing" secondItem="FyD-wJ-FBx" secondAttribute="trailing" constant="20" id="ox9-wK-mo1"/>
+                            <constraint firstItem="5MD-Ef-x2V" firstAttribute="bottom" secondItem="4zw-gj-5xT" secondAttribute="bottom" constant="15" id="qEM-Ik-Zf1"/>
                             <constraint firstItem="FyD-wJ-FBx" firstAttribute="leading" secondItem="5MD-Ef-x2V" secondAttribute="leading" constant="20" id="wZ5-q4-kjG"/>
                         </constraints>
                     </view>

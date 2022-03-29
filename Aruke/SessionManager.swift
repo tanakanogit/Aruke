@@ -24,9 +24,7 @@ class SessionManager {
         guard let accessToken = self.credentials?.accessToken else {
             return callback(CredentialsManagerError.noCredentials)
         }
-        
-//        print(accessToken) ポストマン用
-        
+
         self.authentication
             .userInfo(withAccessToken: accessToken)
             .start { result in

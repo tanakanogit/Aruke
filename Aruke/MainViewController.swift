@@ -59,7 +59,6 @@ class MainViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) { // 戻ってきた時に実行されます
         super.viewWillAppear(animated)
-        print(paymentFlag)
         if paymentFlag == 1 {
             semaphore.wait()
         }
@@ -104,7 +103,6 @@ class MainViewController: UIViewController {
         do{
             let goals = try JSONDecoder().decode(Goals.self, from: jsonData)
             if !goals.goals.isEmpty {
-                print("==呼ばれた！！==")
                 self.lastGoal = goals.goals.last!
             }
             semaphore.signal()
@@ -164,12 +162,7 @@ class MainViewController: UIViewController {
         // 目標が達成されていた場合、achievedを1に更新
         if stepsTotal >= Double(self.lastGoal!.steps) {
             self.achievedUpdate()
-        }
-        
-        // 日付が超えていて目標が達成されていない場合
-        if Date() >= goalTerm && paymentFlag == 0 {
-            paymentFlag = 1
-            paymentCreate()
+            return
         }
         
         // 日付が超えていなくて目標が達成されていない場合、進捗画面を出す
@@ -182,6 +175,15 @@ class MainViewController: UIViewController {
             )
             self.ContainerView.bringSubviewToFront(self.DisplayGoalView)
         }
+        
+        // 日付が超えていて目標が達成されていない場合
+        if Date() >= goalTerm && paymentFlag == 0 {
+            paymentFlag = 1
+            paymentCreate()
+            return
+        }
+        
+        
     }
     
     private func achievedUpdate() {
