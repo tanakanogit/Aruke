@@ -50,7 +50,7 @@ class MainViewController: UIViewController {
     
     var lastGoal: Goal?
     var stepsTotal: Double = 0.0
-    var paymentFlag: Bool = false
+    var paymentFlag: Int = 0
     var semaphore = DispatchSemaphore(value: 0)
     
     override func viewDidLoad() {
@@ -59,7 +59,10 @@ class MainViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) { // 戻ってきた時に実行されます
         super.viewWillAppear(animated)
-
+        print(paymentFlag)
+        if paymentFlag == 1 {
+            semaphore.wait()
+        }
         self.fetchGoal()
         
         let readDataTypes = Set([HKObjectType.quantityType(forIdentifier: .stepCount)!])
@@ -164,7 +167,8 @@ class MainViewController: UIViewController {
         }
         
         // 日付が超えていて目標が達成されていない場合
-        if Date() >= goalTerm {
+        if Date() >= goalTerm && paymentFlag == 0 {
+            paymentFlag = 1
             paymentCreate()
         }
         
@@ -199,7 +203,7 @@ class MainViewController: UIViewController {
         var request = URLRequest(url: backendCheckoutUrl)
         request.httpMethod = "POST"
         request.addValue("Bearer \(token!)", forHTTPHeaderField: "Authorization")
-        let task = URLSession.shared.dataTask(with: request, completionHandler: { [weak self] (data, response, error) in
+        URLSession.shared.dataTask(with: request, completionHandler: { [weak self] (data, response, error) in
           guard let data = data,
                 let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String : Any],
                 let customerId = json["customer"] as? String,
@@ -220,8 +224,10 @@ class MainViewController: UIViewController {
             DispatchQueue.main.async {
                 self.didTapCheckoutButton()
             }
-        })
-        task.resume()
+//            self.semaphore.signal()
+        }).resume()
+//        semaphore.wait()
+//        task.resume()
     }
     
     func didTapCheckoutButton() {
@@ -230,10 +236,16 @@ class MainViewController: UIViewController {
         case .completed:
           print("Your order is confirmed")
             self.achievedUpdate()
+            self.fetchGoal()
+            self.semaphore.signal()
         case .canceled:
           print("Canceled!")
+            self.semaphore.signal()
+            self.paymentCreate()
         case .failed(let error):
           print("Payment failed: \n\(error.localizedDescription)")
+            self.semaphore.signal()
+            self.paymentCreate()
         }
       }
     }
