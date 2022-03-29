@@ -41,7 +41,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
         let rootViewController = storyboard.instantiateViewController(withIdentifier: "MainViewController")
         self.window?.rootViewController = rootViewController
-//            self.window?.backgroundColor = UIColor.white 念のため残した
         self.window?.makeKeyAndVisible()
     }
     
@@ -50,7 +49,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let storyboard = UIStoryboard(name: "Login", bundle: Bundle.main)
         let rootViewController = storyboard.instantiateViewController(withIdentifier: "LoginViewController")
         self.window?.rootViewController = rootViewController
-//            self.window?.backgroundColor = UIColor.white 念のため残した
         self.window?.makeKeyAndVisible()
     }
 

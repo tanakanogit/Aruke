@@ -45,7 +45,7 @@ class SettingGoalViewController: UIViewController {
         semaphore = DispatchSemaphore(value: 0)
         
         let token = SessionManager.shared.credentials?.accessToken
-        var request = URLRequest(url: URL(string: "https://2cea-2001-268-c0cd-6792-9137-42d2-f28d-c044.ngrok.io/goals")!)
+        var request = URLRequest(url: URL(string: "https://a2c7-2001-268-c0cf-fd4d-9867-fa9-4a18-5de2.ngrok.io/goals")!)
         request.httpMethod = "POST"
         request.httpBody = try? JSONSerialization.data(withJSONObject: json) // param
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")

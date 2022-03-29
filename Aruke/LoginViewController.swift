@@ -14,13 +14,12 @@ class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        print("== Login Controller ==")
     }
     
     @IBAction func tapLogin(_ sender: UIButton) {
         showLogin()
         // TODO(makio): login後の処理を記載する必要あり
+        
     }
     
     private func showLogin() {
@@ -44,6 +43,11 @@ class LoginViewController: UIViewController {
                                     print("Failed to retrieve profile: \(String(describing: error))")
                                     return
                                 }
+                                let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+                                let mainView = storyboard.instantiateInitialViewController() as! MainViewController
+                                mainView.modalTransitionStyle = .coverVertical
+                                mainView.modalPresentationStyle = .fullScreen
+                                self.present(mainView, animated: true, completion: nil)
                             }
                         }
                     }

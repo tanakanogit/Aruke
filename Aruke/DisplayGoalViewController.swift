@@ -18,9 +18,7 @@ class DisplayGoalViewController: UIViewController {
     
     func test(steps: Int, term: String, penalties: Int) {
         self.stepsLabel.text = "目標歩数: \(steps) 歩"
-        self.termLabel.text = "目標達成期限: \(term)"
+        self.termLabel.text = "目標達成期限: \(String(term.prefix(10)).replacingOccurrences(of: "-", with: "/"))"
         self.penaltiesLabel.text = "決心の金額: \(penalties) 円"
     }
-    
-    
 }
