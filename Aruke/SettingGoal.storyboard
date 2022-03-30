@@ -5,7 +5,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -25,6 +24,7 @@
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XeK-zl-16B">
                                 <rect key="frame" x="20" y="193" width="374" height="34"/>
+                                <color key="backgroundColor" name="BaseColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
@@ -36,6 +36,7 @@
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rUf-LK-oA8">
                                 <rect key="frame" x="20" y="316" width="374" height="34"/>
+                                <color key="backgroundColor" name="BaseColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
@@ -54,6 +55,7 @@
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vkN-Ej-eMu">
                                 <rect key="frame" x="20" y="669" width="374" height="70"/>
+                                <color key="backgroundColor" name="MainColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="667-f9-FA8"/>
                                 </constraints>
@@ -61,6 +63,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="目標を立てる">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                    <color key="baseBackgroundColor" name="MainColor"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="createGoal:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="YI0-Lp-ULN"/>
@@ -68,7 +71,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="BaseColor"/>
                         <constraints>
                             <constraint firstItem="XeK-zl-16B" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="1Gm-4g-APB"/>
                             <constraint firstItem="XeK-zl-16B" firstAttribute="top" secondItem="r9W-QN-5TE" secondAttribute="bottom" constant="20" id="50Q-Yq-bGJ"/>
@@ -104,11 +107,11 @@
         </scene>
     </scenes>
     <resources>
+        <namedColor name="BaseColor">
+            <color red="0.9179999828338623" green="0.92900002002716064" blue="0.94900000095367432" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="MainColor">
             <color red="0.34099999070167542" green="0.6589999794960022" blue="0.27799999713897705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>
